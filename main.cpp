@@ -26,5 +26,28 @@ void print(int numbers[], int size) {
 }
 
 void countingSort(int numbers[], int size) {
-    // TODO
+    int max = numbers[0];
+	for( int i=1; i<size; i++){
+		if( max < numbers[i]) max = numbers[i];
+	}
+
+	int* values = new int[max+1];
+	int* sorted = new int[size];
+
+	for(int i=0; i<max; i++){
+		values[numbers[i]]++;
+	}
+
+	for(int i=1; i<=max; i++){
+		values[i] += values[i-1];
+	}
+
+	for(int i=0; i<size; i++){
+		sorted[values[numbers[i]]-1] = numbers[i];
+        --values[numbers[i]]; 
+
+	}
+	for(int i=0; i<size; i++){
+		numbers[i] = sorted[i];
+	}
 }
