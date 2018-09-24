@@ -35,7 +35,7 @@ void countingSort(int numbers[], int size) {
 	int* values = new int[max+1];
 	int* sorted = new int[size];
 
-	for(int i=0; i<max; i++){
+	for(int i=0; i<size; i++){
 		values[numbers[i]]++;
 	}
 
