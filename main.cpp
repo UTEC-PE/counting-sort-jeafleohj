@@ -7,7 +7,8 @@ void print(int numbers[], int size);
 void countingSort(int numbers[], int size);
 
 int main(int argc, char *argv[]) {
-    int numbers[] = {1, 4, 1, 2, 7, 5, 2};
+    //int numbers[] = {1, 4, 1, 2, 7, 5, 2};
+	int numbers[] = {1, 3, 4, 17, 9, 13, 2, 11, 5, 4}; // Probaste con este caso?
     int size = sizeof(numbers) / sizeof(*numbers);
 
     print(numbers, size);
